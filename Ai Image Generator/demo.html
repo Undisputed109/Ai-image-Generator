@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator - Demo</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            color: white;
+        }
+        .demo-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        .demo-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+        }
+        .demo-section h2 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+        .prompt-examples {
+            display: grid;
+            gap: 15px;
+        }
+        .prompt-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ffd700;
+        }
+        .prompt-card strong {
+            color: #ffd700;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+        .features-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .features-list li:before {
+            content: "✨ ";
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>🎨 AI Image Generator Demo</h1>
+        
+        <div class="demo-section">
+            <h2>🚀 Ready to Create Amazing Images?</h2>
+            <p>This powerful AI image generator uses OpenAI's DALL-E 3 to transform your text descriptions into stunning visual masterpieces. No complex setup required - just open the app and start creating!</p>
+            <a href="index.html" class="cta-button">Launch AI Image Generator</a>
+        </div>
+
+        <div class="demo-section">
+            <h2>✨ Key Features</h2>
+            <ul class="features-list">
+                <li><strong>High-Quality Generation:</strong> Uses OpenAI's DALL-E 3 for stunning results</li>
+                <li><strong>Modern UI:</strong> Beautiful, responsive design that works on all devices</li>
+                <li><strong>Customizable Options:</strong> Choose size, quality, and style</li>
+                <li><strong>Image History:</strong> Automatically saves your creations locally</li>
+                <li><strong>Download & Share:</strong> Easy export and sharing functionality</li>
+                <li><strong>Keyboard Shortcuts:</strong> Ctrl+Enter to generate quickly</li>
+                <li><strong>Secure:</strong> API key stored locally, never sent to servers</li>
+            </ul>
+        </div>
+
+        <div class="demo-section">
+            <h2>🎯 Example Prompts to Try</h2>
+            <div class="prompt-examples">
+                <div class="prompt-card">
+                    <strong>Nature & Landscape:</strong><br>
+                    "A serene mountain lake at sunrise with mist rising from the water, surrounded by pine trees, photorealistic style"
+                </div>
+                <div class="prompt-card">
+                    <strong>Sci-Fi & Fantasy:</strong><br>
+                    "A futuristic cityscape with flying cars and neon lights, cyberpunk aesthetic, dramatic lighting"
+                </div>
+                <div class="prompt-card">
+                    <strong>Artistic Styles:</strong><br>
+                    "A cozy coffee shop interior with warm lighting, people working on laptops, modern minimalist design"
+                </div>
+                <div class="prompt-card">
+                    <strong>Character & Portrait:</strong><br>
+                    "A wise old wizard in a magical library, surrounded by floating books and glowing orbs, fantasy art style"
+                </div>
+                <div class="prompt-card">
+                    <strong>Abstract & Creative:</strong><br>
+                    "A dreamy underwater scene with bioluminescent creatures, soft blue lighting, ethereal atmosphere"
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>💡 Tips for Better Results</h2>
+            <ul class="features-list">
+                <li><strong>Be Specific:</strong> Include details about style, lighting, mood, and colors</li>
+                <li><strong>Use Adjectives:</strong> Words like "majestic", "serene", "vibrant" add character</li>
+                <li><strong>Mention Art Style:</strong> "Oil painting", "Digital art", "Photorealistic"</li>
+                <li><strong>Include Lighting:</strong> "Golden hour", "Dramatic shadows", "Soft morning light"</li>
+                <li><strong>Specify Perspective:</strong> "Close-up", "Wide angle", "Bird's eye view"</li>
+            </ul>
+        </div>
+
+        <div class="demo-section">
+            <h2>🔧 Quick Setup</h2>
+            <ol>
+                <li>Get your OpenAI API key from <a href="https://platform.openai.com/api-keys" style="color: #ffd700;">OpenAI Platform</a></li>
+                <li>Open the AI Image Generator</li>
+                <li>Enter your API key when prompted</li>
+                <li>Start creating amazing images!</li>
+            </ol>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="cta-button">🎨 Start Creating Now!</a>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-magic"></i>
+                <h1>AI Image Generator</h1>
+            </div>
+            <p class="subtitle">Transform your ideas into stunning visuals with AI</p>
+        </header>
+
+        <main class="main-content">
+            <div class="input-section">
+                <div class="prompt-container">
+                    <textarea 
+                        id="promptInput" 
+                        placeholder="Describe the image you want to generate... (e.g., 'A futuristic cityscape at sunset with flying cars')"
+                        rows="3"
+                    ></textarea>
+                    <div class="prompt-actions">
+                        <button id="generateBtn" class="generate-btn">
+                            <i class="fas fa-wand-magic-sparkles"></i>
+                            Generate Image
+                        </button>
+                        <button id="clearBtn" class="clear-btn">
+                            <i class="fas fa-trash"></i>
+                            Clear
+                        </button>
+                    </div>
+                </div>
+
+                <div class="options-container">
+                    <div class="option-group">
+                        <label for="imageSize">Image Size:</label>
+                        <select id="imageSize">
+                            <option value="1024x1024">1024x1024 (Square)</option>
+                            <option value="1792x1024">1792x1024 (Landscape)</option>
+                            <option value="1024x1792">1024x1792 (Portrait)</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label for="imageQuality">Quality:</label>
+                        <select id="imageQuality">
+                            <option value="standard">Standard</option>
+                            <option value="hd">HD</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label for="imageStyle">Style:</label>
+                        <select id="imageStyle">
+                            <option value="vivid">Vivid</option>
+                            <option value="natural">Natural</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading-section" id="loadingSection" style="display: none;">
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                </div>
+                <p>Creating your masterpiece...</p>
+            </div>
+
+            <div class="results-section" id="resultsSection">
+                <div class="image-container" id="imageContainer">
+                    <div class="placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Your generated image will appear here</p>
+                    </div>
+                </div>
+                
+                <div class="image-actions" id="imageActions" style="display: none;">
+                    <button id="downloadBtn" class="action-btn download-btn">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                    <button id="shareBtn" class="action-btn share-btn">
+                        <i class="fas fa-share"></i>
+                        Share
+                    </button>
+                    <button id="regenerateBtn" class="action-btn regenerate-btn">
+                        <i class="fas fa-redo"></i>
+                        Regenerate
+                    </button>
+                </div>
+            </div>
+
+            <div class="history-section" id="historySection" style="display: none;">
+                <h3>Recent Generations</h3>
+                <div class="history-grid" id="historyGrid"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Powered by OpenAI DALL-E 3</p>
+        </footer>
+    </div>
+
+    <div class="modal" id="apiKeyModal">
+        <div class="modal-content">
+            <h2>Enter Your OpenAI API Key</h2>
+            <p>To use this AI image generator, you need an OpenAI API key.</p>
+            <div class="api-key-input">
+                <input type="password" id="apiKeyInput" placeholder="sk-...">
+                <button id="saveApiKeyBtn">Save Key</button>
+            </div>
+            <p class="api-note">
+                <i class="fas fa-info-circle"></i>
+                Your API key is stored locally and never sent to our servers.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
